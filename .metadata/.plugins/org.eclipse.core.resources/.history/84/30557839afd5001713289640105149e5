@@ -2,12 +2,12 @@
 <html ng-app="">
 
     <head>
-   <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-  Compiled and minified JavaScript
+  <!-- Compiled and minified JavaScript -->
  
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-            -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          
       <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>  
 
         <meta charset="utf-8">
@@ -84,18 +84,11 @@
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-	                            <form name="userForm" ng-submit="submitForm()" novalidate>	                            
-	                            
-				                    	<div class="form-group" ng-class="{ 'has-error' : userForm.mail.$invalid && !userForm.mail.$pristine }">
-				                        	<label class="sr-only" for="form-email">Mail-ID</label>
-
-            <input type="mail" name="mail" class="form-control" placeholder="Mail-ID..." ng-model="user.mail" required >
-              <span style="color:white" ng-show="userForm.mail.$dirty && userForm.mail.$invalid">
-            
-<span ng-show="userForm.mail.$error.required">Email is required.</span>
-  <span ng-show="userForm.mail.$error.mail">Invalid email address.</span>
-  </span>            
-        </div>
+				                    <form role="form" action="" method="post" class="login-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-username">Username</label>
+				                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
 				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
@@ -192,11 +185,11 @@
 				                        	<label class="sr-only" for="confirm password">Confirm PassWord</label>
 				                        	<input type="text" name="form-confirm-password" placeholder="Confirm Password" class="form-confirm-password form-control" id="form-confirm-password">
 				                        </div> --> 
-				                         <div class="form-group">
+				                         <div>
         <input name="password" type="password" class="form-control" placeholder="Password" ng-model="formData.password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
         <span style="color:white" ng-show="!userForm.password.$error.required &&  userForm.password.$error.pattern && userForm.password.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
       </div>
-      <div class="form-group">
+      <div>
         <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password" ng-model="formData.confirmPassword" ng-pattern="formData.password" required />
         <span style="color:white" ng-show="formData.password != formData.confirmPassword">Your passwords must match.</span>
       </div>
