@@ -84,18 +84,19 @@
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-	                            <form name="userForm" ng-submit="submitForm()" novalidate>	                            
+	                            <form  ng-app="myApp" ng-submit="submitForm()" name="myForm" novalidate>                           
 	                            
-				                    	<div class="form-group" ng-class="{ 'has-error' : userForm.mail.$invalid && !userForm.mail.$pristine }">
-				                        	<label class="sr-only" for="form-email">Mail-ID</label>
-
-            <input type="mail" name="mail" class="form-control" placeholder="Mail-ID..." ng-model="user.mail" required >
-              <span style="color:white" ng-show="userForm.mail.$dirty && userForm.mail.$invalid">
-            
-<span ng-show="userForm.mail.$error.required">Email is required.</span>
-  <span ng-show="userForm.mail.$error.mail">Invalid email address.</span>
-  </span>            
-        </div>
+				                    <div class="form-group" ng-class="{ 'has-error' : myForm.email.$invalid && !myForm.email.$pristine }">
+				             <label class="sr-only" for="form-email">Email</label>
+				                        	<input type="email" name="email" placeholder="Email..." class="form-email form-control" id="form-email" ng-model="email" required>
+				                       <span style="color:white" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+				                        </div>	
+				                       
+				                         
+				                        
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
 				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
