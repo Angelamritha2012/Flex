@@ -96,17 +96,10 @@
 				                       
 				                         
 				                        
-				                        <!-- <div class="form-group">
+				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
 				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-				                        </div> -->
-				                        <div class="form-group" ng-class="{ 'has-error' : myForm.name.$invalid && !myForm.name.$pristine }">
-				                        	<label class="sr-only" for="form-password">Password</label>
-
-            <input type="password" name="password" class="form-control" placeholder="Password..."ng-model="user.password" required>
-            
-            <p style="color:white" ng-show="myForm.password.$invalid && !myForm.password.$pristine" class="help-block">Password is required.</p>
-        </div>
+				                        </div>
 				                        <button type="submit" class="btn">Sign in!</button>
 				                    </form>
 			                    </div>

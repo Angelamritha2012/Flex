@@ -96,17 +96,10 @@
 				                       
 				                         
 				                        
-				                        <!-- <div class="form-group">
+				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
 				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-				                        </div> -->
-				                        <div class="form-group" ng-class="{ 'has-error' : myForm.name.$invalid && !myForm.name.$pristine }">
-				                        	<label class="sr-only" for="form-password">Password</label>
-
-            <input type="password" name="password" class="form-control" placeholder="Password..."ng-model="user.password" required>
-            
-            <p style="color:white" ng-show="myForm.password.$invalid && !myForm.password.$pristine" class="help-block">Password is required.</p>
-        </div>
+				                        </div>
 				                        <button type="submit" class="btn">Sign in!</button>
 				                    </form>
 			                    </div>
@@ -215,7 +208,7 @@
 				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
 				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
 				                        </div>
-				                        <button type="submit" class="btn" ng-disabled="formData.password != formData.confirmPassword" ng-click="createUser()">Sign me up!</button>
+				                        <button type="submit" class="btn" ng-disabled="formData.password != formData.confirmPassword != formData.firstname != formData.email" ng-click="signUp()">Sign me up!</button>
 				                    </form>
 				                    
 			                    </div>
