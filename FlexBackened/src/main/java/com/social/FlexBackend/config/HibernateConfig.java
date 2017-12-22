@@ -21,10 +21,11 @@ public class HibernateConfig {
 	
 		@Autowired
 		@Bean(name ="dataSource")
-		public DriverManagerDataSource dataSource() {
+	/*Database connection settings*/
+	public DriverManagerDataSource dataSource() {
 			DriverManagerDataSource ds = new DriverManagerDataSource();
 			ds.setDriverClassName("org.h2.Driver");
-			ds.setUrl("jdbc:h2:tcp://localhost/~/test");
+			ds.setUrl("jdbc:h2:tcp://localhost/~/flora");
 			ds.setUsername("sa");
 			ds.setPassword("");
 			return ds;

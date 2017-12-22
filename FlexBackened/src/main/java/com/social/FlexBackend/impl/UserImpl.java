@@ -18,28 +18,30 @@ import com.social.FlexBackend.model.User;
 @Repository("userDAO")
 @Transactional
 
-public class UserImpl implements UserDao{
+public class UserImpl implements UserDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	public UserImpl(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 
-
 	public List<User> getAllUser() {
-		String hql ="from User";
-		Query query=sessionFactory.getCurrentSession().createQuery(hql);
+		String hql = "from UserDetail";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		return query.list();
 	}
 
 	@Transactional
 	public boolean saveUser(User user) {
-		try{
+		try {
 			sessionFactory.getCurrentSession().save(user);
 			return true;
-		}
-		catch(HibernateException e){
+		} catch (HibernateException e) {
 			e.printStackTrace();
 			return false;
 
@@ -47,24 +49,43 @@ public class UserImpl implements UserDao{
 	}
 
 	@Transactional
-	public User getByEmail(String email) {
-		
-		return (User)sessionFactory.getCurrentSession().get(User.class, email);
+	public User getUser(String username) {
+
+		return (User) sessionFactory.getCurrentSession().get(User.class, username);
 	}
 
 	@Transactional
 	public boolean updateOnlineStatus(String status, User user) {
-		try
-		{
+		try {
 			user.setIsOnline(status);
 			sessionFactory.getCurrentSession().update(user);
 			return true;
-		}catch(Exception e)
-		{
-			System.out.println("exception arised"+e);
+		} catch (Exception e) {
+			System.out.println("exception arised:::" + e);
 			return false;
 		}
-	
+
+	}
+
+	public boolean checkLogin(User user) {
+		try {
+			Session session = sessionFactory.openSession();
+			Query query = session.createQuery("from User where username=:fname and password=:paswrd");
+			query.setParameter("fname", user.getFirstname());
+			query.setParameter("paswrd", user.getPassword());
+			User tempuser = (User) query.list().get(0);
+			if (tempuser == null)
+				return false;
+			else
+				return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public User find(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
