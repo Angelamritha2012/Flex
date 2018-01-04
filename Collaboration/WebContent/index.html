@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="module">
 
     <head>
    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -40,7 +40,7 @@
 
     <body>
 
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Flex</a>
@@ -55,7 +55,13 @@
 
     </ul>
   </div>
-</nav>
+</nav> -->
+<div>
+<nav-bar></nav-bar>
+</div>
+<div>
+<ng-view></ng-view>
+</div>
   
         <!-- Top content -->
         <div class="top-content">
@@ -65,7 +71,9 @@
                 	
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>FLEX</strong></h1>
+<!--                             <h1><strong>FLEX</strong></h1>
+ -->                                      <img src="./assets/img/logo1.jpg" width="150" height="150" alt="" class="responsive-img">
+                            
                             
                         </div>
                     </div>
@@ -201,7 +209,9 @@
 				                        </div> --> 
 				                         <div class="form-group">
         <input name="password" type="password" class="form-control" placeholder="Password" ng-model="formData.password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
+        
         <span style="color:white" ng-show="!userForm.password.$error.required &&  userForm.password.$error.pattern && userForm.password.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
+      
       </div>
       <div class="form-group">
         <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password" ng-model="formData.confirmPassword" ng-pattern="formData.password" required />
@@ -210,11 +220,11 @@
       <div>
 
   				                         
-				                        <div class="form-group">
+				                        <!-- <div class="form-group">
 				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
 				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
 				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-				                        </div>
+				                        </div> -->
 				                        <button type="submit" class="btn" ng-disabled="formData.password != formData.confirmPassword" ng-click="createUser()">Sign me up!</button>
 				                    </form>
 				                    
@@ -243,6 +253,12 @@
         		</div>
         	</div>
         </footer>
+<script src="./assets/js/angular-route.js"></script>
+<script src="./assets/js/angular-cookies.js"></script>
+<script src="./assets/js/ngStorage.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<script src="./assets/js/app.routes.js"></script>
 
         <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
