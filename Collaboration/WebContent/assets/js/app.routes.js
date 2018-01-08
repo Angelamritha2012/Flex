@@ -4,8 +4,14 @@ app.config(['$routeProvider','$locationProvider',function($routeProvider,$locati
 when('/blog',{
 	templateUrl:'./ui/blog.html',
 }).
+when('/bloglist',{
+	templateUrl:'./ui/bloglist.html',
+}).
 when('/forum',{
 	templateUrl:'./ui/forum.html',
+}).
+when('/forumlist',{
+	templateUrl:'./ui/forumlist.html',
 }).
 when('/',{
 	templateUrl:'./ui/.html',
