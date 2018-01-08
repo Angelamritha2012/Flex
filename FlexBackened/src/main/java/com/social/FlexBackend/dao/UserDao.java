@@ -11,7 +11,7 @@ public interface UserDao {
 	
 	public boolean saveUser(User user);
 	public User find (int id);
-	public boolean updateOnlineStatus(String status,User user);
+	public boolean updateOnlineStatus(Boolean status,User user);
 	public boolean checkLogin (User user);
 	
 }

@@ -19,14 +19,14 @@ import com.social.FlexBackend.model.User;
 public class UserController {
 	@Autowired
 	private UserDao userDao; 
-	@RequestMapping(value="/") 
+	@GetMapping(value="/") 
 	public ModelAndView index(){
 		ModelAndView mv=new ModelAndView("index");
 		return mv;
 	}
 	
 	//@GetMapping("/user/{userId}")	
-	@RequestMapping(value="/user/{userId}", method=RequestMethod.GET)
+	@GetMapping(value="/user/{userId}")
 	public ResponseEntity<User> getUser(@PathVariable("userId") int userId) {
 		User entity= userDao.find(userId);
 		if (entity == null) {
@@ -35,7 +35,7 @@ public class UserController {
 		return new ResponseEntity<User>(entity, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/user/{userId}", method=RequestMethod.GET)
+	@GetMapping(value="/usern/{userId}")
 	public @ResponseBody User getUserN(@PathVariable("userId") int userId) {
 		User entity= userDao.find(userId);
 		if (entity == null) {

@@ -28,13 +28,7 @@ public class User {
 	@Column(name="User_enabled")
 	private boolean enabled;
 	@Column(name="User_isOnline")
-	private String isOnline;
-	public String getIsOnline() {
-		return isOnline;
-	}
-	public void setIsOnline(String isOnline) {
-		this.isOnline = isOnline;
-	}
+	private boolean isOnline;
 	public int getId() {
 		return id;
 	}
@@ -77,5 +71,10 @@ public class User {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-
+	public boolean isOnline() {
+		return isOnline;
+	}
+	public void setOnline(boolean isOnline) {
+		this.isOnline = isOnline;
+	}
 }

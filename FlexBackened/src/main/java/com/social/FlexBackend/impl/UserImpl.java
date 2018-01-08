@@ -22,7 +22,33 @@ public class UserImpl implements UserDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	public UserImpl(SessionFactory sessionFactory) {
+
+	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean saveUser(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public User find(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean updateOnlineStatus(Boolean status, User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean checkLogin(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}
+	/*public UserImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 
@@ -55,9 +81,9 @@ public class UserImpl implements UserDao {
 	}
 
 	@Transactional
-	public boolean updateOnlineStatus(String status, User user) {
+	public boolean updateOnlineStatus(Boolean status, User user) {
 		try {
-			user.setIsOnline(status);
+			user.setisOnline(status);
 			sessionFactory.getCurrentSession().update(user);
 			return true;
 		} catch (Exception e) {
@@ -88,4 +114,4 @@ public class UserImpl implements UserDao {
 		return null;
 	}
 
-}
+}*/

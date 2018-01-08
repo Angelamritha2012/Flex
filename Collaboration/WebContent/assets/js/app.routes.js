@@ -13,6 +13,9 @@ when('/forum',{
 when('/forumlist',{
 	templateUrl:'./ui/forumlist.html',
 }).
+when('/login',{
+	templateUrl:'./ui/login.html',
+}).
 when('/',{
 	templateUrl:'./ui/.html',
 }).
