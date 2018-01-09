@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ADD BLOG</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="row">
+          <label><b>BLOG TITLE</b>&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span></label>
+      <input type="text" placeholder="BLOG TITLE" name="BLOG TITLE" required></div>
+    <div class="row">
+
+      <label><b>DESCRIPTION</b>&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></label>
+
+ <textarea rows="4" cols="50" name="comment" form="modal-content animate">
+Enter text here...</textarea>
+</div>
+</div>
+
+        <div class="modal-footer">
+<button type="submit" class="btn btn-success">ADD</button>
+
+      
+
+      <button type="button"class="btn btn-danger" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+<div class="w3-col l8 s12">
+  
+  <div class="w3-card-4 w3-margin w3-white">
+<!--     <img src="woods.jpg" alt="Nature" style="width:100%">
+ -->    <div class="w3-container">
+      <h3><b>WOODS</b></h3>
+      <h5>Trees combat climate change <span class="w3-opacity">April 7, 2014</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Excess carbon dioxide (CO2) caused by many factors is a building up in our atmosphere and contributing to climate change. Trees absorb CO2, removing and storing the carbon while releasing the oxygen back into the air. In one year, an acre of mature trees absorbs the amount of CO2 produced when you drive your car 26,000 miles.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+    
+        <div class="container">
+  
+
+  <button type="button" class="btn btn-info">(0)Comments</button>
+  <button type="button" class="btn btn-primary">Edit</button>
+  <button type="button" class="btn btn-danger">Delete</button>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ 
+                        	
+                        
+
+</body>
+</html>

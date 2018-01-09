@@ -2,25 +2,31 @@
 app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
 	$routeProvider.
 when('/blog',{
-	templateUrl:'./ui/blog.html',
+	templateUrl:'./ui/modules/Blog/blog.html',
 }).
 when('/bloglist',{
-	templateUrl:'./ui/bloglist.html',
+	templateUrl:'./ui/modules/Blog/bloglist.html',
 }).
 when('/forum',{
-	templateUrl:'./ui/forum.html',
+	templateUrl:'./ui/modules/Forum/forum.html',
 }).
 when('/forumlist',{
-	templateUrl:'./ui/forumlist.html',
+	templateUrl:'./ui/modules/Forum/forumlist.html',
 }).
 when('/login',{
-	templateUrl:'./ui/login.html',
+	templateUrl:'./ui/modules/Login/login.html',
 }).
 when('/',{
-	templateUrl:'./ui/.html',
+	templateUrl:'./ui/modules/.html',
+}).
+when('/profile',{
+	templateUrl:'./ui/modules/Admin/profile.html',
+}).
+when('/event',{
+	templateUrl:'./ui/modules/Event/event.html',
 }).
 when('/job',{
-	templateUrl:'./ui/job.html',
+	templateUrl:'./ui/modules/Job/job.html',
 })
 }]);
 
