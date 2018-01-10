@@ -17,10 +17,13 @@ when('/login',{
 	templateUrl:'./ui/modules/Login/login.html',
 }).
 when('/',{
-	templateUrl:'./ui/modules/.html',
+	templateUrl:'./ui/Common/home.html',
 }).
 when('/profile',{
 	templateUrl:'./ui/modules/Admin/profile.html',
+}).
+when('/dashboard',{
+	templateUrl:'./ui/modules/Admin/dashboard.html',
 }).
 when('/event',{
 	templateUrl:'./ui/modules/Event/event.html',

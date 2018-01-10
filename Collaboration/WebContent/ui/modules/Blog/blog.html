@@ -7,11 +7,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
 
+<br>
+<br>
+<br>
 <div class="container">
-  <h2>Modal Example</h2>
+  <h2>WELCOME TO BLOG</h2>
   <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ADD BLOG</button>
 
@@ -70,7 +74,7 @@ Enter text here...</textarea>
         <div class="container">
   
 
-  <button type="button" class="btn btn-info">(0)Comments</button>
+  <a href="#/bloglist"><button type="button" class="btn btn-info">(4)Comments</button></a>
   <button type="button" class="btn btn-primary">Edit</button>
   <button type="button" class="btn btn-danger">Delete</button>
   
@@ -83,6 +87,16 @@ Enter text here...</textarea>
  
                         	
                         
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
