@@ -1,9 +1,0 @@
-INDEX VERSION 1.4+F:\Angular js\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3230409460.index
-1317308233.index
-100202090.index
-3539637077.index
-4249814833.index
-100202090.index
-3128282403.index
-882706984.index

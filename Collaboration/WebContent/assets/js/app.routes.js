@@ -19,8 +19,11 @@ when('/login',{
 when('/',{
 	templateUrl:'./ui/Common/home.html',
 }).
-when('/profile',{
-	templateUrl:'./ui/modules/Admin/profile.html',
+when('/myprofile',{
+	templateUrl:'./ui/modules/Admin/myprofile.html',
+}).
+when('/notification',{
+	templateUrl:'./ui/modules/Admin/notification.html',
 }).
 when('/dashboard',{
 	templateUrl:'./ui/modules/Admin/dashboard.html',
